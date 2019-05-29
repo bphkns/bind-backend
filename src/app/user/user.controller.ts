@@ -1,5 +1,5 @@
 import { Controller, Get, Post, UsePipes, Body, BadRequestException } from "@nestjs/common";
-import { ValidationPipe } from "src/pipes/validation.pipe";
+import { ValidationPipe } from "./../../pipes/validation.pipe";
 import { CreateUserDto } from "./dto/create-user.dto";
 import { UserService } from "./user.service";
 
@@ -16,5 +16,10 @@ export class UserController {
         } catch (err) {
             throw new BadRequestException(err);
         }
+    }
+
+    @Get()
+    async find() {
+        return await this.userService.find();
     }
 }

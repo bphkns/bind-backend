@@ -14,4 +14,8 @@ export class UserService {
     async findUser(token:string): Promise<Partial<User>> {
         return null;
     }
+
+    async find() {
+        return 'Hello';
+    }
 }
