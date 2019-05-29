@@ -1,0 +1,22 @@
+{
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "",
+    "database": "bind-dev",
+    "entities": [
+        "src/app/**/*.entity.ts"
+    ],
+    "logging":"all",
+    "migrations": [
+        "src/migrations/*.ts"
+    ],
+    "migrationsRun": true,
+    "subscribers": [
+        "src/app/**/*.subscriber.ts"
+    ],
+    "cli": {
+        "migrationsDir": "src/migrations"
+    }
+}
